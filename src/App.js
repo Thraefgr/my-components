@@ -1,8 +1,17 @@
 import './App.css';
+import cardArt from "./card-art.png"
 
 function App() {
   return (
-    <h1>Hello World!</h1>
+    <div className="card">
+      <div className="card-front">
+        <div className="card-power">10</div>
+        <div className="card-name">First of The Cards</div>
+      </div>
+      <div className="card-back">
+        <p className="card-story">Once upon a time there was a wicked god...</p>
+      </div>
+    </div>
   );
 }
 

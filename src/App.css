@@ -1,0 +1,42 @@
+.card {
+  width: 270px;
+  height: 480px;
+  border: 4px solid gold;
+  color: white;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url(card-art.png);
+}
+
+.card-name, .card-power {
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px black;
+}
+
+.card-name {
+  text-align: center;
+}
+
+.card-power {
+  text-decoration: dotted;
+}
+
+
+.card-back {
+  background-image: linear-gradient(black, gold);
+}
+
+.card-story {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 2px black;
+}
