@@ -1,11 +1,26 @@
-.card {
+.card-container {
   width: 270px;
   height: 480px;
+  perspective: 1600px;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
   border: 4px solid gold;
   color: white;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card-container:hover .card {
+  transform: rotateY(180deg);
 }
 
 .card-front, .card-back {
+  position: absolute;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -16,6 +31,8 @@
   flex-direction: column;
   justify-content: space-between;
   background-image: url(card-art.png);
+  z-index: 1;
+  backface-visibility: hidden;
 }
 
 .card-name, .card-power {
@@ -34,6 +51,7 @@
 
 .card-back {
   background-image: linear-gradient(black, gold);
+  transform: rotateY(180deg);
 }
 
 .card-story {
